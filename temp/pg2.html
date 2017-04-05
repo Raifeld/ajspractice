@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Rat Pack</title>
+    <base href="/"> <!-- needed for Angular HTML5 mode -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <link rel="stylesheet" type="text/css" href="bandstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
+    <script type="text/javascript" src="ratpackjava.js"></script>
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">The Rat Pack</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/temp/pg3">Book The Band</a></li>
+                <li><a href="/temp/pg1">Buy The Music</a></li>
+                <li><a href="/temp/pg2">Meet The Band</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div ng-view>
+        <p id="rplogo" class="centretext">Meet The Band
+        <button id="picswap">Frank</button>
+        </p>
+ 
+    </div>
+
+    <div id="content">
+
+
+        <div class="contentbox">
+                <p id="rplogo">Frank</p>
+            <img src="media/frank.jpeg" alt="Frank Sinatra" height="60%" width="60%" id="picswap">
+        </div>
+        <div class="contentbox">
+                <p id="rplogo">Sammy</p>
+            <img src="media/sammy.jpeg" alt="Album Cover" height="60%" width="60%" >
+        </div>
+        
+        <div class="contentbox">
+                <p id="rplogo">Dean</p>
+            <img src="media/dean.jpeg" alt="Album Cover" height="60%" width="60%">
+        </div>
+
+        <script type="text/javascript">
+            
+            document.getElementById("picswap").onclick = function() {swapfunction()};
+
+            function swapfunction() {
+                document.getElementById("picswap").innerHTML = "PicSWAP";
+            }
+        </script>
+
+</body>
